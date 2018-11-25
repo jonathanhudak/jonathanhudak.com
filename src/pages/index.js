@@ -1,12 +1,13 @@
 import React from 'react'
 import constructionGif from "../images/under-construction.gif"
+import Layout from '../components/layout';
 
 const IndexPage = () => (
-  <div className="container">
+  <Layout>
     <h1>Hello, this is Jonathan Hudak's website.</h1>
     <p>A new site is under construction Please check back another day.</p>
     <img src={constructionGif} alt="Under construction" />
-  </div>
+  </Layout>
 )
 
 export default IndexPage
