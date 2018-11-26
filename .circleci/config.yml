@@ -44,7 +44,7 @@ jobs:
       - run: npm run build
       - add_ssh_keys:
           fingerprints:
-            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+            - "24:21:3d:7c:d6:26:37:75:ca:95:27:0b:9e:57:13:5f"
       - run: git remote add live git@github.com:jonathanhudak/jonathanhudak.github.io.git
       - run: npm run deploy
       

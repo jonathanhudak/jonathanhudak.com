@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 const IndexPage = () => (
   <Layout>
     <h1>Hello, this is Jonathan Hudak's website.</h1>
-    <p>A new site is under construction Please check back another day.</p>
+    <p>A new site is under construction. Please return another day 🌴</p>
     <img src={constructionGif} alt="Under construction" />
   </Layout>
 )
