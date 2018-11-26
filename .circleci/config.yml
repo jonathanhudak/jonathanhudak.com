@@ -23,7 +23,7 @@ jobs:
     steps:
       - add_ssh_keys:
         fingerprints:
-          - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+        - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
       - checkout
       - run: git config --global user.email "hudak.jonathan@gmail.com"
       - run: git config --global user.name "jonathanhudak"
