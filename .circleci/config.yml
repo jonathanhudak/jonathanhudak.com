@@ -39,5 +39,10 @@ jobs:
         
       # run tests!
       # - run: yarn test
+      - build:
+        - run: npm run build
+      - deploy:
+        - run: git remote add live git@github.com:jonathanhudak/jonathanhudak.github.io.git
+        - run: npm run deploy
 
 
