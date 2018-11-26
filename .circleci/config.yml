@@ -22,6 +22,8 @@ jobs:
 
     steps:
       - checkout
+      - git config --global user.email "hudak.jonathan@gmail.com"
+      - git config --global user.name "jonathanhudak"
 
       # Download and cache dependencies
       - restore_cache:
@@ -44,3 +46,7 @@ jobs:
       - run: npm run deploy
 
 
+
+
+
+      
