@@ -24,6 +24,9 @@ jobs:
       - checkout
       - run: git config --global user.email "hudak.jonathan@gmail.com"
       - run: git config --global user.name "jonathanhudak"
+      - add_ssh_keys:
+        fingerprints:
+          - "09:d6:77:5b:8d:9b:0b:58:fb:34:ce:67:25:16:71:33"
 
       # Download and cache dependencies
       - restore_cache:
