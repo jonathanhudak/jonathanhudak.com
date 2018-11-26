@@ -42,13 +42,12 @@ jobs:
       # run tests!
       # - run: yarn test
       - run: npm run build
-  deploy:
-    steps:
       - add_ssh_keys:
           fingerprints:
             - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
       - run: git remote add live git@github.com:jonathanhudak/jonathanhudak.github.io.git
       - run: npm run deploy
+      
 
 
 
