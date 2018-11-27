@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
-        <div class="container">
+        <div>
           {children}
         </div>
       </>
