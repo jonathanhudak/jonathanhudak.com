@@ -20,10 +20,12 @@ jobs:
 
 
     steps:
-      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "09:d6:77:5b:8d:9b:0b:58:fb:34:ce:67:25:16:71:33"
       - run: git config --global user.email "hudak.jonathan@gmail.com"
       - run: git config --global user.name "jonathanhudak"
-
+      - checkout
 
       # Download and cache dependencies
       - restore_cache:
@@ -42,9 +44,6 @@ jobs:
       # run tests!
       # - run: yarn test
       - run: npm run build
-      - add_ssh_keys:
-          fingerprints:
-            - "09:d6:77:5b:8d:9b:0b:58:fb:34:ce:67:25:16:71:33"
       - run: git remote add live git@github.com:jonathanhudak/jonathanhudak.github.io.git
       - run: npm run deploy
       
