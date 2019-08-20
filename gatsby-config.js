@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-theme-ui',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,12 +32,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-20803833-1",
+        trackingId: 'UA-20803833-1',
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
         respectDNT: true,
-        cookieDomain: "jonathanhudak.com",
+        cookieDomain: 'jonathanhudak.com',
       },
     },
   ],

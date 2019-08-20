@@ -1,12 +1,16 @@
-import React from 'react'
-import constructionGif from "../images/under-construction.gif"
-import Layout from '../components/layout';
+import Layout from '../components/layout'
+import { Styled } from 'theme-ui'
+
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { Box, Card, Image, Heading, Text } from 'rebass'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hello, this is Jonathan Hudak's website.</h1>
-    <p>A new site is under construction. Please return another day <span role="img" aria-label="Palm Tree">🌴</span></p>
-    <img src={constructionGif} alt="Under construction" />
+    <Text as="p" fontSize={[3, 4, 5]} fontFamily="body" color="primary">
+      some stuff about how i am an amazing frontend engineer currently working
+      @amazon
+    </Text>
   </Layout>
 )
 
