@@ -1,11 +1,32 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { future } from '@theme-ui/presets'
+import { Global } from '@emotion/core'
+import {
+  ThemeProvider,
+  Layout,
+  Header,
+  Main,
+  Container,
+  Styled,
+} from 'theme-ui'
+import { Heading, Box } from 'rebass'
 
 import './layout.css'
 
-const Layout = ({ children }) => (
+const jonathanTheme = {
+  ...future,
+  colors: {
+    ...future.colors,
+  },
+  fonts: {
+    ...future.fonts,
+    heading: "'DM Serif Display', serif",
+  },
+}
+
+export default ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -28,16 +49,33 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
-        <div>
-          {children}
-        </div>
+        <ThemeProvider theme={jonathanTheme}>
+          <Global
+            styles={theme => ({
+              body: {
+                padding: 0,
+                margin: 0,
+              },
+            })}
+          />
+
+          <Header>
+            <Container>
+              <Heading
+                as="h1"
+                color="primary"
+                fontSize={[5, 6, 8]}
+                fontWeight={500}
+              >
+                Jonathan Hudak
+              </Heading>
+            </Container>
+          </Header>
+          <Main>
+            <Container>{children}</Container>
+          </Main>
+        </ThemeProvider>
       </>
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
