@@ -1,31 +1,27 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "jonathanhudak.com",
+  "description": "Website of Jonathan Hudak",
+  "version": "0.1.0",
+  "author": "Jonathan Hudak <hudak.jonathan@gmail.com>",
   "dependencies": {
-    "@emotion/core": "^10.0.15",
-    "@emotion/styled": "^10.0.15",
-    "@mdx-js/react": "^1.2.2",
-    "@theme-ui/presets": "^0.2.30",
-    "emotion": "^10.0.14",
-    "gatsby": "^2.0.19",
-    "gatsby-image": "^2.0.15",
-    "gatsby-plugin-google-analytics": "^2.0.7",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.11",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.7",
-    "gatsby-plugin-theme-ui": "^0.2.29",
-    "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-transformer-sharp": "^2.1.4",
+    "@emotion/styled": "^10.0.27",
+    "@mdx-js/mdx": "^1.5.5",
+    "gatsby": "^2.19.7",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-emotion": "^4.1.22",
+    "gatsby-plugin-feed-mdx": "^1.0.1",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-mdx": "^1.0.70",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-sharp": "^2.3.13",
     "gh-pages": "^2.0.1",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0",
-    "rebass": "^4.0.2",
-    "styled-system": "^5.0.21",
-    "theme-ui": "^0.2.31"
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
   },
   "keywords": [
     "gatsby"
@@ -35,15 +31,18 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d public -o live -b master"
-  },
-  "devDependencies": {
-    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
     "url": "https://jonathanhudak.github.io/"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.27",
+    "@mdx-js/react": "^1.5.5",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-theme-ui-blog": "^0.3.1",
+    "theme-ui": "^0.3.1"
   }
 }

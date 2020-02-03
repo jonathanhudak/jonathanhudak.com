@@ -1,16 +1,14 @@
-import Layout from '../components/layout'
-import { Styled } from 'theme-ui'
+import React from 'react'
+import { Link } from 'gatsby'
 
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { Box, Card, Image, Heading, Text } from 'rebass'
+import Layout from 'components/layout'
+import SEO from 'components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <Text as="p" fontSize={[3, 4, 5]} fontFamily="body" color="primary">
-      some stuff about how i am an amazing frontend engineer currently working
-      @amazon
-    </Text>
+    <SEO title="Home" />
+    <h1>Hi homepage</h1>
+    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
