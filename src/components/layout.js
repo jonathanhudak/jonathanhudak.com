@@ -1,44 +1,35 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
-import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
 
-import Header from './header'
+const MyH1 = props => <h1 style={{ color: 'tomato' }} {...props} />
+const MyParagraph = props => (
+  <p style={{ fontSize: '18px', lineHeight: 1.6 }} {...props} />
+)
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const components = {
+  h1: MyH1,
+  p: MyParagraph,
+}
+
+const Layout = ({ location, title, children }) => {
+  // const rootPath = `${__PATH_PREFIX__}/`
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+    <div>
+      <MDXProvider components={components}>
+        <h1>
+          <Link to={`/`}>{title}</Link>
+        </h1>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Jonathan Hudak. Built with
+          © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
-    </>
+      </MDXProvider>
+    </div>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
