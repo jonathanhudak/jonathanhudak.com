@@ -3,12 +3,13 @@ import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from 'components/layout'
 import SEO from 'components/seo'
+import { Styled } from 'theme-ui'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  console.log(post)
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -17,8 +18,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <Styled.h1>{post.frontmatter.title}</Styled.h1>
+          <Styled.p>{post.frontmatter.date}</Styled.p>
         </header>
         <hr />
         <MDXRenderer>{post.body}</MDXRenderer>
