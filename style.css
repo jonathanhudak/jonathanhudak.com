@@ -165,16 +165,9 @@ p {
     list-style: square;
 }
 
-
-
-body {
-	background-color: blue;
-    color: white;
-}
-
 @media (prefers-color-scheme: light) {
 	body {
-		background-color: orange;
+		background-color: linen;
 	}
 }
 
