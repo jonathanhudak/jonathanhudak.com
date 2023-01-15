@@ -98,7 +98,7 @@ summary {
     align-items: center;
     padding-bottom: var(--space-xs);
 }
-summary > h3 {
+summary > h2, summary > h3 {
     display: inline-block;
 }
 
