@@ -84,27 +84,16 @@ body {
 
 header, main, footer {
     padding: 0 var(--space-m-l);
-    max-width: calc(var(--space-3xl) * 4);
+    max-width: calc(var(--space-3xl) * 6);
     margin: auto;
     display: block;
+    border: none;
 }
 
 a {
     color: var(--accent-color);
 }
 
-summary {
-    /* display: flex; */
-    align-items: center;
-    padding-bottom: var(--space-xs);
-}
-summary > h2, summary > h3 {
-    display: inline-block;
-}
-
-summary:focus {
-    border: 1px solid var(--accent);
-}
 
 h1, h2 {
     padding-top: var( --space-m-l);
