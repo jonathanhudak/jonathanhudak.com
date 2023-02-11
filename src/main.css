@@ -170,3 +170,8 @@ p {
 footer {
     padding-top: var(--space-2xl)
 }
+
+
+h1 {
+    color: magenta;
+}

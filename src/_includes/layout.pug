@@ -3,5 +3,31 @@ head
   meta(charset='utf-8')
   title= site.title
   
-  link(rel='stylesheet', href='main.css')
-main !{content}
+  link(rel='stylesheet', href='/main.css')
+
+.u-flow
+    header
+      .u-flow
+        p: a(href="/") Jonathan Hudak
+        ul.ul
+          li
+            a(href='https://www.instagram.com/hudak_doodles/') Artist  🖼
+          li
+            | Musician 🎸
+            | &nbsp;
+            a(title='Mystical Synth Pop from 2010-2011' href='https://tumbledry.bandcamp.com/music') 🎹
+            |  🎤 🎧
+          li
+            | Coder of Web 💻
+            | &nbsp;
+            a(href='https://hudak.codes') hudak.codes
+            |  | &nbsp;💾| &nbsp;
+            a(href='https://github.com/jonathanhudak') github
+          li 
+            a(href="/about") About
+main
+  .u-flow !{content}
+footer.footer
+  .u-flow
+    p
+      | Jonathan Hudak &copy; 2023
