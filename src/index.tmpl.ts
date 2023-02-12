@@ -8,7 +8,15 @@ export default function ({ search }: PageData) {
       ${posts
         .sort((a, b) => +b.data.title - +a.data.title)
         .map(
-          (post) => `<h2><a href="${post.data.url}">${post.data.title}</a></h2>`
+          (post) => `<h2>
+            ${
+              post.data.link
+                ? `<a href="${post.data.url}">${post.data.title}</a>`
+                : post.data.title
+            }
+          </h2>
+          ${post.data.summary && `<p>${post.data.summary}</p>`}
+          `
         )
         .join("")}
     </ul>
