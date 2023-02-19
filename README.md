@@ -3,3 +3,4 @@
 ## References
 
 * https://lume.land/
+* https://lume.land/plugins/imagick/
